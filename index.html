@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Aathvi Hospitals – Women’s Cancer Screening Camp</title>
+   <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f8f9fa;
+        margin: 0;
+        padding: 20px;
+      }
+      .container {
+        max-width: 800px;
+        margin: auto;
+        background: #fff;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+      .header {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .header img {
+        max-width: 150px;
+        margin-bottom: 10px;
+      }
+      h2 {
+        color: #c2185b;
+        margin: 5px 0;
+      }
+      .address {
+        font-size: 14px;
+        color: #555;
+        margin-bottom: 20px;
+      }
+      label {
+        display: block;
+        margin-top: 15px;
+        font-weight: bold;
+      }
+      input,
+      textarea,
+      select {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+      }
+      .checkbox-group,
+      .radio-group {
+        margin-top: 10px;
+      }
+      .checkbox-group label,
+      .radio-group label {
+        font-weight: normal;
+        margin-right: 15px;
+      }
+      button {
+        margin-top: 20px;
+        padding: 12px 20px;
+        background: #c2185b;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      button:hover {
+        background: #a3154a;
+      }
+      #msg {
+        margin-top: 15px;
+        font-weight: bold;
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+       <div class="container">
+      <!-- Header with logo and title -->
+      <div class="header">
+        <img src="./download (1).png" alt="Aathvi Hospitals Logo" />
+        <h2>Aathvi Hospitals – Women’s Cancer Screening Camp</h2>
+        <div class="address">
+          📍 Aathvi Multispeciality Hospital || 
+          📅 Date: 05-10-2025 | 🕙 Time: 10:00 AM – 4:00 PM
+        </div>
+      </div>
+
+      <!-- Use action and method attributes -->
+      <form
+        id="regForm"
+        
+      >
+        <label>Full Name:</label>
+        <input type="text" name="Full_Name" required />
+
+        <label>Age:</label>
+        <input type="number" name="Age" required />
+
+        <label>Date of Birth:</label>
+        <input type="date" name="Date_of_Birth" required />
+
+        <label>Gender:</label>
+        <input type="text" name="Gender" value="Female" readonly />
+
+        <label>Marital Status:</label>
+        <select name="Marital_Status" required>
+          <option>Single</option>
+          <option>Married</option>
+          <option>Widow</option>
+          <option>Other</option>
+        </select>
+
+        <label>Address:</label>
+        <textarea name="Address"></textarea>
+
+        <label>Mobile Number:</label>
+        <input type="text" name="Mobile_Number" required />
+
+        <label>Email ID:</label>
+        <input type="email" name="Email_ID" />
+
+        <label>Existing Health Conditions:</label>
+        <div class="checkbox-group">
+          <label
+            ><input
+              type="checkbox"
+              name="Existing_Health_Conditions"
+              value="Diabetes"
+            />
+            Diabetes</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="Existing_Health_Conditions"
+              value="Hypertension"
+            />
+            Hypertension</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="Existing_Health_Conditions"
+              value="Thyroid"
+            />
+            Thyroid</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="Existing_Health_Conditions"
+              value="Heart Disease"
+            />
+            Heart Disease</label
+          >
+        </div>
+        <input
+          type="text"
+          name="Existing_Health_Conditions_Other"
+          placeholder="Other conditions"
+        />
+
+        <label>Family history of cancer?</label>
+        <select name="Family_History_of_Cancer">
+          <option>No</option>
+          <option>Yes</option>
+        </select>
+        <input
+          type="text"
+          name="Cancer_Type_Specify"
+          placeholder="If Yes, specify"
+        />
+
+        <label>Currently under any medication?</label>
+        <select name="On_Medication">
+          <option>No</option>
+          <option>Yes</option>
+        </select>
+        <input
+          type="text"
+          name="Medication_Details"
+          placeholder="If Yes, mention"
+        />
+
+        <h3>Menstrual History</h3>
+        <label>Age at Menarche:</label>
+        <input type="number" name="Age_at_Menarche" />
+
+        <label>Menopause:</label>
+        <select name="Menopause">
+          <option>No</option>
+          <option>Yes</option>
+        </select>
+        <input type="number" name="Menopause_Age" placeholder="If Yes, Age" />
+
+        <label>Any irregularities?</label>
+        <input type="text" name="Menstrual_Irregularities" />
+
+        <h3>Obstetric History</h3>
+        <label>Number of Pregnancies:</label>
+        <input type="number" name="Number_of_Pregnancies" />
+
+        <label>Number of Deliveries:</label>
+        <input type="number" name="Number_of_Deliveries" />
+
+        <label>Any complications?</label>
+        <input type="text" name="Complications" />
+
+        <button type="submit">Submit</button>
+      </form>
+
+      <p id="msg"></p>
+    </div>
+
+   <script>
+  const scriptURL = "https://script.google.com/macros/s/AKfycbxXwlxpxQ7ELeJts0gl725NU4Ac6kJmPlWoiZrCmedmDwwi9mBD4rvrG_DOr6GVVwPoSA/exec"; // replace
+  const form = document.getElementById("regForm");
+  const msg = document.getElementById("msg");
+  const submitBtn = form.querySelector("button[type='submit']");
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault(); // Prevent page reload
+
+    // Change button text to Submitting
+    submitBtn.innerText = "Submitting...";
+    submitBtn.disabled = true; // disable button to prevent multiple clicks
+
+    const formData = new FormData(form);
+
+    // Collect checkboxes
+    let conditions = [];
+    form.querySelectorAll(
+      "input[name='Existing_Health_Conditions']:checked"
+    ).forEach(cb => conditions.push(cb.value));
+    formData.set("Existing_Health_Conditions", conditions.join(", "));
+
+    // Send via fetch
+    fetch(scriptURL, {
+      method: "POST",
+      body: formData
+    })
+      .then(response => {
+        msg.style.color = "green";
+        msg.innerText = "✅ Form submitted successfully!";
+        form.reset(); // Clear form fields
+      })
+      .catch(error => {
+        msg.style.color = "red";
+        msg.innerText = "❌ Error submitting form. Please try again.";
+        console.error(error);
+      })
+      .finally(() => {
+        // Revert button text
+        submitBtn.innerText = "Submit";
+        submitBtn.disabled = false;
+      });
+  });
+</script>
+
+    </script>
+  </body>
+</html>

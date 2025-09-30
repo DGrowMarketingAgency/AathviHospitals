@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Aathvi Hospitals – Patient Feedback Form</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f8f9fa;
+        margin: 0;
+        padding: 20px;
+      }
+      .container {
+        max-width: 800px;
+        margin: auto;
+        background: #fff;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+      .header {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .header img {
+        max-width: 150px;
+        margin-bottom: 10px;
+      }
+      h2 {
+        color: #c2185b;
+        margin: 5px 0;
+      }
+      .address {
+        font-size: 14px;
+        color: #555;
+        margin-bottom: 20px;
+      }
+      label {
+        display: block;
+        margin-top: 15px;
+        font-weight: bold;
+      }
+      input,
+      textarea,
+      select {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+      }
+      .checkbox-group label,
+      .radio-group label {
+        font-weight: normal;
+        margin-right: 15px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+      }
+      table th,
+      table td {
+        border: 1px solid #ccc;
+        padding: 8px;
+        text-align: center;
+      }
+      button {
+        margin-top: 20px;
+        padding: 12px 20px;
+        background: #c2185b;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      button:hover {
+        background: #a3154a;
+      }
+      #msg {
+        margin-top: 15px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <img src="./download (1).png" alt="Aathvi Hospitals Logo" />
+        <h2>Patient Feedback Form</h2>
+        <div class="address">
+          📍 Aathvi Multispeciality Hospital || 📅 Date: 05-10-2025
+        </div>
+      </div>
+
+      <form id="feedbackForm">
+        <label>Name (Optional):</label>
+        <input type="text" name="Name" />
+
+        <label>Age:</label>
+        <input type="number" name="Age" />
+
+        <label>Mobile No (Optional):</label>
+        <input type="text" name="Mobile_Number" />
+
+        <label>1. How did you hear about this camp?</label>
+        <div class="checkbox-group">
+          <label
+            ><input type="checkbox" name="Heard_About_Camp" value="Newspaper" />
+            Newspaper</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="Heard_About_Camp"
+              value="Social Media"
+            />
+            Social Media</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="Heard_About_Camp"
+              value="Friends/Family"
+            />
+            Friends/Family</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="Heard_About_Camp"
+              value="Doctor Recommendation"
+            />
+            Doctor Recommendation</label
+          >
+          <label
+            ><input type="checkbox" name="Heard_About_Camp" value="Other" />
+            Other</label
+          >
+          <input
+            type="text"
+            name="Heard_About_Camp_Other"
+            placeholder="If Other, specify"
+          />
+        </div>
+
+        <label>2. How satisfied are you with the following?</label>
+        <table>
+          <tr>
+            <th>Service Area</th>
+            <th>Excellent</th>
+            <th>Good</th>
+            <th>Average</th>
+            <th>Poor</th>
+          </tr>
+          <tr>
+            <td>Registration Process</td>
+            <td>
+              <input
+                type="radio"
+                name="Registration_Process"
+                value="Excellent"
+              />
+            </td>
+            <td>
+              <input type="radio" name="Registration_Process" value="Good" />
+            </td>
+            <td>
+              <input type="radio" name="Registration_Process" value="Average" />
+            </td>
+            <td>
+              <input type="radio" name="Registration_Process" value="Poor" />
+            </td>
+          </tr>
+          <tr>
+            <td>Doctors’ Consultation</td>
+            <td>
+              <input
+                type="radio"
+                name="Doctors_Consultation"
+                value="Excellent"
+              />
+            </td>
+            <td>
+              <input type="radio" name="Doctors_Consultation" value="Good" />
+            </td>
+            <td>
+              <input type="radio" name="Doctors_Consultation" value="Average" />
+            </td>
+            <td>
+              <input type="radio" name="Doctors_Consultation" value="Poor" />
+            </td>
+          </tr>
+          <tr>
+            <td>Screening Tests</td>
+            <td>
+              <input type="radio" name="Screening_Tests" value="Excellent" />
+            </td>
+            <td><input type="radio" name="Screening_Tests" value="Good" /></td>
+            <td>
+              <input type="radio" name="Screening_Tests" value="Average" />
+            </td>
+            <td><input type="radio" name="Screening_Tests" value="Poor" /></td>
+          </tr>
+          <tr>
+            <td>Staff Support & Guidance</td>
+            <td>
+              <input type="radio" name="Staff_Support" value="Excellent" />
+            </td>
+            <td><input type="radio" name="Staff_Support" value="Good" /></td>
+            <td><input type="radio" name="Staff_Support" value="Average" /></td>
+            <td><input type="radio" name="Staff_Support" value="Poor" /></td>
+          </tr>
+          <tr>
+            <td>Overall Camp Experience</td>
+            <td>
+              <input type="radio" name="Overall_Experience" value="Excellent" />
+            </td>
+            <td>
+              <input type="radio" name="Overall_Experience" value="Good" />
+            </td>
+            <td>
+              <input type="radio" name="Overall_Experience" value="Average" />
+            </td>
+            <td>
+              <input type="radio" name="Overall_Experience" value="Poor" />
+            </td>
+          </tr>
+        </table>
+
+        <label
+          >3. Did the camp create awareness about women’s health and cancer
+          prevention?</label
+        >
+        <div class="radio-group">
+          <label><input type="radio" name="Awareness" value="Yes" /> Yes</label>
+          <label
+            ><input type="radio" name="Awareness" value="Somewhat" />
+            Somewhat</label
+          >
+          <label><input type="radio" name="Awareness" value="No" /> No</label>
+        </div>
+
+        <label
+          >4. Would you recommend Aathvi Hospitals’ health camps to
+          others?</label
+        >
+        <div class="radio-group">
+          <label
+            ><input type="radio" name="Recommend" value="Definitely" />
+            Definitely</label
+          >
+          <label
+            ><input type="radio" name="Recommend" value="Maybe" /> Maybe</label
+          >
+          <label><input type="radio" name="Recommend" value="No" /> No</label>
+        </div>
+
+        <label>5. Any suggestions to improve future camps?</label>
+        <textarea
+          name="Suggestions"
+          rows="3"
+          placeholder="Your suggestions here..."
+        ></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+
+      <p id="msg"></p>
+    </div>
+
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbwPD4iMA1sE3JJzxGQWBXbEiYfoTFu0QVX6lGpDwuJboFcVxyHfFy_T_obXXEYxqEqm/exec"; // Replace with your Google Apps Script URL
+      const form = document.getElementById("feedbackForm");
+      const msg = document.getElementById("msg");
+      const submitBtn = form.querySelector("button[type='submit']");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        // Change button text while submitting
+        submitBtn.innerText = "Submitting...";
+        submitBtn.disabled = true;
+
+        const formData = new FormData(form);
+
+        // Collect multiple checkbox values
+        let heardAbout = [];
+        form
+          .querySelectorAll("input[name='Heard_About_Camp']:checked")
+          .forEach((cb) => heardAbout.push(cb.value));
+        formData.set("Heard_About_Camp", heardAbout.join(", "));
+
+        fetch(scriptURL, {
+          method: "POST",
+          body: formData,
+        })
+          .then(() => {
+            msg.style.color = "green";
+            msg.innerText = "✅ Feedback submitted successfully!";
+            form.reset();
+          })
+          .catch(() => {
+            msg.style.color = "red";
+            msg.innerText = "❌ Error submitting feedback.";
+          })
+          .finally(() => {
+            submitBtn.innerText = "Submit";
+            submitBtn.disabled = false;
+          });
+      });
+    </script>
+  </body>
+</html>
