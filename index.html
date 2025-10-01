@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aathvi Hospitals – Women’s Cancer Screening Camp</title>
    <style>
       body {
@@ -76,6 +77,34 @@
         font-weight: bold;
         color: green;
       }
+     
+     /* --- MOBILE STYLING --- */
+    @media (max-width: 600px) {
+      .header h2 {
+        font-size: 18px;
+        line-height: 1.4;
+      }
+
+      /* Force line break for heading */
+      .header h2 {
+        display: block;
+      }
+      .header h2::after {
+        content: "";
+        display: block;
+      }
+
+      /* Break the title into two lines */
+      .header h2 {
+        white-space: normal; /* allow wrapping */
+      }
+
+      /* Address items stacked */
+      .address {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
     </style>
   </head>
   <body>
@@ -119,8 +148,8 @@
         <label>Address:</label>
         <textarea name="Address"></textarea> -->
 
-        <label>Mobile Number:</label>
-        <input type="text" name="Mobile_Number" required />
+        <!-- <label>Mobile Number:</label> -->
+        <input type="text" name="Mobile_Number" placeholder="Mobile Number" required />
 
         <!-- <label>Existing Health Conditions:</label>
         <div class="checkbox-group">
@@ -209,13 +238,16 @@
         <label>Any complications?</label>
         <input type="text" name="Complications" /> -->
 
-        <label>Email ID:</label>
-        <input type="email" name="Email_ID" />
-        
-        <label>Location:</label>
-        <input type="text" name="location" />
-        
-        <button type="submit">Submit</button>
+        <!-- <label>Email ID:</label> -->
+        <input type="email" name="Email_ID" placeholder="Email ID" />
+
+
+        //Location Label Added Here -- 
+        <!-- <label>Location:</label> -->
+        <input type="text" name="location" placeholder="location" />
+
+        //button was moved to center
+        <center></center><button type="submit">Submit</button></center>
       </form>
 
       <p id="msg"></p>
@@ -269,5 +301,6 @@
     </script>
   </body>
 </html>
+
 
 
