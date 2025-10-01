@@ -83,6 +83,10 @@
         font-weight: bold;
         color: green;
       }
+
+     .mobile-Info{
+       display:none;
+     }
      
      /* --- MOBILE STYLING --- */
     @media (max-width: 600px) {
@@ -105,12 +109,17 @@
         white-space: normal; /* allow wrapping */
       }
 
-      /* Address items stacked */
+      /* Hide the address (Address items stacked) */
       .address {
-        display: flex;
+        /* display: flex;
         flex-direction: column;
-        gap: 5px;
+        gap: 5px; */
+        display: none;
       }
+      .mobile-info {
+    display: block;
+    text-align: center; /* optional alignment */
+  }
     </style>
   </head>
   <body>
@@ -120,10 +129,17 @@
       <div class="header">
         <img src="./download (1).png" alt="Aathvi Hospitals Logo" />
         <h2>Aathvi Hospitals – Women’s Cancer Screening Camp</h2>
+         <br> 
         <div class="address">
           📍 Aathvi Multispeciality Hospital || 
           📅 Date: 05-10-2025 | 🕙 Time: 10:00 AM – 4:00 PM
         </div>
+        <div class="mobile-Info">
+           📍 Aathvi Multispeciality Hospital
+          <br>
+          📅 Date: 05-10-2025
+          <br>
+          🕙 Time: 10:00 AM – 4:00 PM
       </div>
 
       <!-- Use action and method attributes -->
@@ -306,6 +322,7 @@
     </script>
   </body>
 </html>
+
 
 
 
