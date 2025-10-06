@@ -2,50 +2,54 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aathvi Hospitals – Women’s Cancer Screening Camp</title>
-   <style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
       body {
-        font-family: Arial, sans-serif;
-        background: #f8f9fa;
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: #f0f4f8;
         margin: 0;
-        padding: 20px;
+        padding: 15px;
       }
       .container {
-        max-width: 800px;
+        max-width: 900px;
         margin: auto;
-        background: #fff;
-        padding: 25px;
-        border-radius: 10px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        background: #fce4ec;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
       }
-     
-     /* Add left-right padding to form */
-      form {
-        padding: 0 25px;  /* 15px space on left & right */
-      }
-    
       .header {
         text-align: center;
-        margin-bottom: 20px;
+        margin-bottom: 25px;
       }
       .header img {
-        max-width: 150px;
-        margin-bottom: 10px;
+        max-width: 130px;
+        margin-bottom: 12px;
       }
       h2 {
         color: #c2185b;
-        margin: 5px 0;
+        margin: 8px 0;
+        font-size: 22px;
+      }
+      h3 {
+        margin-top: 30px;
+        color: #c2185b;
+        border-left: 4px solid #c2185b;
+        padding-left: 8px;
+        font-size: 18px;
       }
       .address {
         font-size: 14px;
-        color: #555;
+        color: #444;
         margin-bottom: 20px;
       }
       label {
         display: block;
         margin-top: 15px;
-        font-weight: bold;
+        font-weight: 600;
+        color: #333;
+        font-size: 14px;
       }
       input,
       textarea,
@@ -54,107 +58,89 @@
         padding: 12px;
         margin-top: 5px;
         border: 1px solid #ccc;
-        border-radius: 6px;
+        border-radius: 8px;
+        font-size: 14px;
+        box-sizing: border-box;
       }
-      .checkbox-group,
-      .radio-group {
+      input:focus,
+      textarea:focus,
+      select:focus {
+        outline: none;
+        border-color: #0077b6;
+        box-shadow: 0 0 5px rgba(0, 119, 182, 0.4);
+      }
+      .checkbox-group {
         margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
       }
-      .checkbox-group label,
-      .radio-group label {
+      .checkbox-group label {
         font-weight: normal;
-        margin-right: 15px;
+        font-size: 14px;
+        color: #333;
       }
       button {
-        margin-top: 20px;
-        padding: 12px 20px;
-        background: #c2185b;
+        margin-top: 25px;
+        padding: 14px 22px;
+        background: linear-gradient(135deg, #0077b6, #c2185b);
         color: white;
         border: none;
-        border-radius: 6px;
+        border-radius: 8px;
         cursor: pointer;
         font-size: 16px;
+        font-weight: bold;
+        transition: all 0.3s ease-in-out;
+        width: 100%;
       }
       button:hover {
-        background: #a3154a;
+        background: linear-gradient(135deg, #005f8c, #a3154a);
+        transform: translateY(-2px);
       }
       #msg {
-        margin-top: 15px;
+        margin-top: 18px;
         font-weight: bold;
-        color: green;
+        text-align: center;
       }
-
-     .mobile-Info{
-       display:none;
-     }
-     
-     /* --- MOBILE STYLING --- */
-    @media (max-width: 600px) {
-      .header h2 {
-        font-size: 18px;
-        line-height: 1.4;
+      /* Responsive */
+      @media (max-width: 600px) {
+        body {
+          padding: 10px;
+        }
+        .container {
+          padding: 20px;
+        }
+        h2 {
+          font-size: 18px;
+        }
+        h3 {
+          font-size: 16px;
+        }
+        button {
+          font-size: 14px;
+          padding: 12px;
+        }
       }
-
-      /* Force line break for heading */
-      .header h2 {
-        display: block;
-      }
-      .header h2::after {
-        content: "";
-        display: block;
-      }
-
-      /* Break the title into two lines */
-      .header h2 {
-        white-space: normal; /* allow wrapping */
-      }
-
-      /* Hide the address (Address items stacked) */
-      .address {
-        /* display: flex;
-        flex-direction: column;
-        gap: 5px; */
-        display: none;
-      }
-      .mobile-Info {
-    display: block;
-        /* margin-top: 5px; */
-    /* text-align: center; /* optional alignment */ */
-    
-  }
     </style>
   </head>
   <body>
     <div class="container">
-       <div class="container">
-      <!-- Header with logo and title -->
+      <!-- Header -->
       <div class="header">
         <img src="./download (1).png" alt="Aathvi Hospitals Logo" />
-<<<<<<< HEAD
-        <h2>Aathvi Hospitals – Women’s Cancer Screening Camp</h2>
-         <br> 
-=======
-        <h2>Aathvi Hospitals – Women's wellness Camp</h2>
->>>>>>> bfbb3f6 (update)
+        <h2>Aathvi Hospitals – Women’s Wellness Camp</h2>
         <div class="address">
-          📍 Aathvi Multispeciality Hospital || 
-          📅 Date: 05-10-2025 | 🕙 Time: 10:00 AM – 4:00 PM
+          📍 Aathvi Multispeciality Hospital <br />
+          📅 Date: 05-10-2025 | 🕙 10:00 AM – 4:00 PM
         </div>
-        <div class="mobile-Info">
-          <p>📍 Aathvi Multispeciality Hospital</p>
-          <p>📅 Date: 05-10-2025</p>
-          <p>🕙 Time: 10:00 AM – 4:00 PM</p>
       </div>
 
-      <!-- Use action and method attributes -->
-      <form
-        id="regForm"
-        
-      >
-        <!-- <label>Full Name:</label> -->
-        <input type="text" name="Full_Name" placeholder="Full Name" required />
+      <!-- Form -->
+      <form id="regForm">
+        <label>Full Name:</label>
+        <input type="text" name="Full_Name" required />
 
-        <!-- <label>Age:</label>
+        <label>Age:</label>
         <input type="number" name="Age" required />
 
         <label>Date of Birth:</label>
@@ -172,12 +158,15 @@
         </select>
 
         <label>Address:</label>
-        <textarea name="Address"></textarea> -->
+        <textarea name="Address"></textarea>
 
-        <!-- <label>Mobile Number:</label> -->
-        <input type="text" name="Mobile_Number" placeholder="Mobile Number" required />
+        <label>Mobile Number:</label>
+        <input type="text" name="Mobile_Number" required />
 
-        <!-- <label>Existing Health Conditions:</label>
+        <label>Email ID:</label>
+        <input type="email" name="Email_ID" />
+
+        <label>Existing Health Conditions:</label>
         <div class="checkbox-group">
           <label
             ><input
@@ -216,9 +205,9 @@
           type="text"
           name="Existing_Health_Conditions_Other"
           placeholder="Other conditions"
-        /> -->
+        />
 
-        <!-- <label>Family history of cancer?</label>
+        <label>Family history of cancer?</label>
         <select name="Family_History_of_Cancer">
           <option>No</option>
           <option>Yes</option>
@@ -262,79 +251,52 @@
         <input type="number" name="Number_of_Deliveries" />
 
         <label>Any complications?</label>
-        <input type="text" name="Complications" /> -->
+        <input type="text" name="Complications" />
 
-        <!-- <label>Email ID:</label> -->
-        <input type="email" name="Email_ID" placeholder="Email ID" />
-        
-        <!-- Location Label Added Here --  -->
-        <!-- <label>Location:</label> -->
-        <input type="text" name="location" placeholder="Location" />
-
-        <!-- button was moved to center -->
-        <center><button type="submit">Submit</button></center>
+        <button type="submit">Submit</button>
       </form>
 
       <p id="msg"></p>
     </div>
 
-   <script>
-  const scriptURL = "https://script.google.com/macros/s/AKfycbxXwlxpxQ7ELeJts0gl725NU4Ac6kJmPlWoiZrCmedmDwwi9mBD4rvrG_DOr6GVVwPoSA/exec"; // replace
-  const form = document.getElementById("regForm");
-  const msg = document.getElementById("msg");
-  const submitBtn = form.querySelector("button[type='submit']");
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbxXwlxpxQ7ELeJts0gl725NU4Ac6kJmPlWoiZrCmedmDwwi9mBD4rvrG_DOr6GVVwPoSA/exec"; // replace
+      const form = document.getElementById("regForm");
+      const msg = document.getElementById("msg");
+      const submitBtn = form.querySelector("button[type='submit']");
 
-  form.addEventListener("submit", (e) => {
-    e.preventDefault(); // Prevent page reload
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        submitBtn.innerText = "Submitting...";
+        submitBtn.disabled = true;
 
-    // Change button text to Submitting
-    submitBtn.innerText = "Submitting...";
-    submitBtn.disabled = true; // disable button to prevent multiple clicks
+        const formData = new FormData(form);
+        let conditions = [];
+        form
+          .querySelectorAll("input[name='Existing_Health_Conditions']:checked")
+          .forEach((cb) => conditions.push(cb.value));
+        formData.set("Existing_Health_Conditions", conditions.join(", "));
 
-    const formData = new FormData(form);
-
-    // Collect checkboxes
-    let conditions = [];
-    form.querySelectorAll(
-      "input[name='Existing_Health_Conditions']:checked"
-    ).forEach(cb => conditions.push(cb.value));
-    formData.set("Existing_Health_Conditions", conditions.join(", "));
-
-    // Send via fetch
-    fetch(scriptURL, {
-      method: "POST",
-      body: formData
-    })
-      .then(response => {
-        msg.style.color = "green";
-        msg.innerText = "✅ Form submitted successfully!";
-        form.reset(); // Clear form fields
-      })
-      .catch(error => {
-        msg.style.color = "red";
-        msg.innerText = "❌ Error submitting form. Please try again.";
-        console.error(error);
-      })
-      .finally(() => {
-        // Revert button text
-        submitBtn.innerText = "Submit";
-        submitBtn.disabled = false;
+        fetch(scriptURL, {
+          method: "POST",
+          body: formData,
+        })
+          .then((response) => {
+            msg.style.color = "green";
+            msg.innerText = "✅ Form submitted successfully!";
+            form.reset();
+          })
+          .catch((error) => {
+            msg.style.color = "red";
+            msg.innerText = "❌ Error submitting form. Please try again.";
+            console.error(error);
+          })
+          .finally(() => {
+            submitBtn.innerText = "Submit";
+            submitBtn.disabled = false;
+          });
       });
-  });
-</script>
-
     </script>
   </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
