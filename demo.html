@@ -2,199 +2,258 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <title>Aathvi Hospitals – Women’s Cancer Screening Camp</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aathvi Hospitals – Patient Feedback Form</title>
     <style>
-      /* Global Reset */
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-
       body {
-        font-family: Arial, sans-serif;
-        background: #f8f9fa;
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: #f0f4f8;
         margin: 0;
         padding: 15px;
       }
-
       .container {
-        max-width: 480px;
-        width: 100%;
+        max-width: 900px;
         margin: auto;
-        background: #fce4ec; /* light pink */
-        padding: 25px;
-        border-radius: 15px;
-        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+        background: #fce4ec;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
       }
-
       .header {
         text-align: center;
-        margin-bottom: 20px;
+        margin-bottom: 25px;
       }
-
       .header img {
-        max-width: 100px;
-        height: auto;
-        margin-bottom: 10px;
+        max-width: 130px;
+        margin-bottom: 12px;
       }
-
       h2 {
         color: #c2185b;
-        margin: 5px 0 15px;
-        font-size: 1.5rem;
+        margin: 8px 0;
+        font-size: 22px;
       }
-
+      h3 {
+        margin-top: 30px;
+        color: #c2185b;
+        border-left: 4px solid #c2185b;
+        padding-left: 8px;
+        font-size: 18px;
+      }
       .address {
-        font-size: 0.9rem;
-        color: #555;
-        margin-bottom: 10px;
+        font-size: 14px;
+        color: #444;
+        margin-bottom: 20px;
       }
-
       label {
         display: block;
-        margin-top: 12px;
-        font-weight: bold;
+        margin-top: 15px;
+        font-weight: 600;
         color: #333;
-        font-size: 0.95rem;
+        font-size: 14px;
       }
-
       input,
       textarea,
       select {
         width: 100%;
         padding: 12px;
-        margin-top: 6px;
-        border: 1px solid #ddd;
-        border-radius: 25px;
-        font-size: 0.95rem;
-        outline: none;
-        transition: 0.3s;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 14px;
+        box-sizing: border-box;
       }
-
       input:focus,
       textarea:focus,
       select:focus {
-        border-color: #c2185b;
-        box-shadow: 0 0 4px rgba(194, 24, 91, 0.4);
+        outline: none;
+        border-color: #0077b6;
+        box-shadow: 0 0 5px rgba(0, 119, 182, 0.4);
       }
-
-      textarea {
-        border-radius: 12px;
+      .checkbox-group {
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
       }
-
+      .checkbox-group label {
+        font-weight: normal;
+        font-size: 14px;
+        color: #333;
+      }
       button {
-        margin-top: 20px;
-        width: 100%;
-        padding: 14px;
-        background: #c2185b;
+        margin-top: 25px;
+        padding: 14px 22px;
+        background: linear-gradient(135deg, #0077b6, #c2185b);
         color: white;
         border: none;
-        border-radius: 25px;
+        border-radius: 8px;
         cursor: pointer;
-        font-size: 1rem;
+        font-size: 16px;
         font-weight: bold;
-        transition: 0.3s;
+        transition: all 0.3s ease-in-out;
+        width: 100%;
       }
-
       button:hover {
-        background: #a3154a;
+        background: linear-gradient(135deg, #005f8c, #a3154a);
+        transform: translateY(-2px);
       }
-
       #msg {
-        margin-top: 15px;
+        margin-top: 18px;
         font-weight: bold;
         text-align: center;
       }
-
-      /* Responsive Styles */
-      @media (max-width: 768px) {
+      /* Responsive */
+      @media (max-width: 600px) {
         body {
           padding: 10px;
         }
         .container {
           padding: 20px;
-          border-radius: 12px;
         }
         h2 {
-          font-size: 1.3rem;
+          font-size: 18px;
+        }
+        h3 {
+          font-size: 16px;
         }
         button {
-          font-size: 0.95rem;
+          font-size: 14px;
           padding: 12px;
-        }
-      }
-
-      @media (max-width: 480px) {
-        h2 {
-          font-size: 1.2rem;
-        }
-        .header img {
-          max-width: 80px;
-        }
-        input,
-        textarea,
-        select {
-          font-size: 0.9rem;
-          padding: 10px;
-        }
-        button {
-          font-size: 0.9rem;
-          padding: 10px;
         }
       }
     </style>
   </head>
   <body>
     <div class="container">
+      <!-- Header -->
       <div class="header">
         <img src="./download (1).png" alt="Aathvi Hospitals Logo" />
-        <h2>Patient Feedback Form</h2>
+        <h2>Aathvi Hospitals – Women’s Wellness Camp</h2>
         <div class="address">
           📍 Aathvi Multispeciality Hospital <br />
-          📅 Date: 05-10-2025
+          📅 Date: 05-10-2025 | 🕙 10:00 AM – 4:00 PM
         </div>
       </div>
 
-      <form id="feedbackForm">
-        <input type="text" name="Name" placeholder="Name (Optional)" />
+      <!-- Form -->
+      <form id="regForm">
+        <label>Full Name:</label>
+        <input type="text" name="Full_Name" required />
 
-        <input type="number" name="Age" placeholder="Age" />
+        <label>Age:</label>
+        <input type="number" name="Age" required />
 
+        <label>Date of Birth:</label>
+        <input type="date" name="Date_of_Birth" required />
+
+        <label>Gender:</label>
+        <input type="text" name="Gender" value="Female" readonly />
+
+        <label>Marital Status:</label>
+        <select name="Marital_Status" required>
+          <option>Single</option>
+          <option>Married</option>
+          <option>Widow</option>
+          <option>Other</option>
+        </select>
+
+        <label>Address:</label>
+        <textarea name="Address"></textarea>
+
+        <label>Mobile Number:</label>
+        <input type="text" name="Mobile_Number" required />
+
+        <label>Email ID:</label>
+        <input type="email" name="Email_ID" />
+
+        <label>Existing Health Conditions:</label>
+        <div class="checkbox-group">
+          <label
+            ><input
+              type="checkbox"
+              name="Existing_Health_Conditions"
+              value="Diabetes"
+            />
+            Diabetes</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="Existing_Health_Conditions"
+              value="Hypertension"
+            />
+            Hypertension</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="Existing_Health_Conditions"
+              value="Thyroid"
+            />
+            Thyroid</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="Existing_Health_Conditions"
+              value="Heart Disease"
+            />
+            Heart Disease</label
+          >
+        </div>
         <input
           type="text"
-          name="Mobile_Number"
-          placeholder="Mobile No (Optional)"
+          name="Existing_Health_Conditions_Other"
+          placeholder="Other conditions"
         />
 
-        <label>How did you hear about this camp?</label>
-        <select name="Heard_About_Camp" required>
-          <option value="">Select an option</option>
-          <option value="Newspaper">Newspaper</option>
-          <option value="Social Media">Social Media</option>
-          <option value="Friends/Family">Friends/Family</option>
-          <option value="Doctor Recommendation">Doctor Recommendation</option>
-          <option value="Other">Other</option>
+        <label>Family history of cancer?</label>
+        <select name="Family_History_of_Cancer">
+          <option>No</option>
+          <option>Yes</option>
         </select>
+        <input
+          type="text"
+          name="Cancer_Type_Specify"
+          placeholder="If Yes, specify"
+        />
 
-        <label
-          >Would you recommend Aathvi Hospitals’ health camps to others?</label
-        >
-        <select name="Recommend" required>
-          <option value="">Select an option</option>
-          <option value="Definitely">Definitely</option>
-          <option value="Maybe">Maybe</option>
-          <option value="No">No</option>
+        <label>Currently under any medication?</label>
+        <select name="On_Medication">
+          <option>No</option>
+          <option>Yes</option>
         </select>
+        <input
+          type="text"
+          name="Medication_Details"
+          placeholder="If Yes, mention"
+        />
 
-        <textarea
-          name="Suggestions"
-          rows="3"
-          placeholder="Any suggestions to improve future camps?"
-        ></textarea>
+        <h3>Menstrual History</h3>
+        <label>Age at Menarche:</label>
+        <input type="number" name="Age_at_Menarche" />
 
-        <button type="submit">SUBMIT</button>
+        <label>Menopause:</label>
+        <select name="Menopause">
+          <option>No</option>
+          <option>Yes</option>
+        </select>
+        <input type="number" name="Menopause_Age" placeholder="If Yes, Age" />
+
+        <label>Any irregularities?</label>
+        <input type="text" name="Menstrual_Irregularities" />
+
+        <h3>Obstetric History</h3>
+        <label>Number of Pregnancies:</label>
+        <input type="number" name="Number_of_Pregnancies" />
+
+        <label>Number of Deliveries:</label>
+        <input type="number" name="Number_of_Deliveries" />
+
+        <label>Any complications?</label>
+        <input type="text" name="Complications" />
+
+        <button type="submit">Submit</button>
       </form>
 
       <p id="msg"></p>
@@ -202,31 +261,36 @@
 
     <script>
       const scriptURL =
-        "https://script.google.com/macros/s/AKfycbwPD4iMA1sE3JJzxGQWBXbEiYfoTFu0QVX6lGpDwuJboFcVxyHfFy_T_obXXEYxqEqm/exec";
-      const form = document.getElementById("feedbackForm");
+        "https://script.google.com/macros/s/AKfycbxXwlxpxQ7ELeJts0gl725NU4Ac6kJmPlWoiZrCmedmDwwi9mBD4rvrG_DOr6GVVwPoSA/exec"; // replace
+      const form = document.getElementById("regForm");
       const msg = document.getElementById("msg");
       const submitBtn = form.querySelector("button[type='submit']");
 
       form.addEventListener("submit", (e) => {
         e.preventDefault();
-
         submitBtn.innerText = "Submitting...";
         submitBtn.disabled = true;
 
         const formData = new FormData(form);
+        let conditions = [];
+        form
+          .querySelectorAll("input[name='Existing_Health_Conditions']:checked")
+          .forEach((cb) => conditions.push(cb.value));
+        formData.set("Existing_Health_Conditions", conditions.join(", "));
 
         fetch(scriptURL, {
           method: "POST",
           body: formData,
         })
-          .then(() => {
+          .then((response) => {
             msg.style.color = "green";
-            msg.innerText = "✅ Feedback submitted successfully!";
+            msg.innerText = "✅ Form submitted successfully!";
             form.reset();
           })
-          .catch(() => {
+          .catch((error) => {
             msg.style.color = "red";
-            msg.innerText = "❌ Error submitting feedback.";
+            msg.innerText = "❌ Error submitting form. Please try again.";
+            console.error(error);
           })
           .finally(() => {
             submitBtn.innerText = "Submit";
