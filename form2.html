@@ -3,106 +3,129 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BloomLife Hospital – Women's Wellness Feedback</title>
+    <title>Aathvi Hospitals – Patient Feedback Form</title>
     <style>
+      /* Global Reset */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
       body {
         font-family: Arial, sans-serif;
-        background-color: #f8f9fa;
+        background: #f8f9fa;
         margin: 0;
         padding: 15px;
       }
-
       .container {
         max-width: 480px;
         width: 100%;
-        margin: 40px auto;
-        background-color: #fce4ec; /* light pink */
+        margin: auto;
+        background: #fce4ec; /* light pink */
         padding: 25px;
-        border-radius: 20px;
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        border-radius: 15px;
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
       }
-
       .header {
         text-align: center;
         margin-bottom: 20px;
       }
-
       .header img {
-        max-width: 150px;
+        max-width: 250px;
+        height: auto;
         margin-bottom: 10px;
       }
-
       h2 {
-        color: #8f116b;
+        color: #c2185b;
+        margin: 5px 0 15px;
         font-size: 1.5rem;
-        margin-bottom: 20px;
       }
-      form {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
+      .address {
+        font-size: 0.9rem;
+        color: #555;
+        margin-bottom: 10px;
+      }
+      label {
+        display: block;
+        margin-top: 12px;
+        font-weight: bold;
+        color: #333;
+        font-size: 0.95rem;
       }
       input,
-      select,
-      textarea {
-        width: 90%;
-        padding: 12px 15px;
-        margin-bottom: 15px;
+      textarea,
+      select {
+        width: 100%;
+        padding: 12px;
+        margin-top: 6px;
         border: 1px solid #ddd;
         border-radius: 25px;
         font-size: 0.95rem;
         outline: none;
         transition: 0.3s;
       }
-
       input:focus,
-      select:focus,
-      textarea:focus {
-        border-color: #8f116b;
-        box-shadow: 0 0 4px hsla(317, 79%, 31%, 0.4);
+      textarea:focus,
+      select:focus {
+        border-color: #c2185b;
+        box-shadow: 0 0 4px rgba(194, 24, 91, 0.4);
       }
-
       textarea {
-        border-radius: 15px;
+        border-radius: 12px;
       }
-
       button {
+        margin-top: 20px;
         width: 100%;
         padding: 14px;
+        background: #c2185b;
+        color: white;
         border: none;
         border-radius: 25px;
-        background-color: #8f116b;
-        color: white;
+        cursor: pointer;
         font-size: 1rem;
         font-weight: bold;
-        cursor: pointer;
         transition: 0.3s;
       }
-
       button:hover {
-        background-color: #b50583;
+        background: #a3154a;
       }
-
       #msg {
-        text-align: center;
         margin-top: 15px;
         font-weight: bold;
-      }
-
-      @media (max-width: 480px) {
+        text-align: center;
+      } /* Responsive Styles */
+      @media (max-width: 768px) {
+        body {
+          padding: 10px;
+        }
         .container {
-          width: 95%;
-          padding: 8px;
+          padding: 20px;
+          border-radius: 12px;
         }
         h2 {
           font-size: 1.3rem;
         }
+        button {
+          font-size: 0.95rem;
+          padding: 12px;
+        }
+      }
+      @media (max-width: 480px) {
+        h2 {
+          font-size: 1.2rem;
+        }
+        .header img {
+          max-width: 80px;
+        }
         input,
-        select,
         textarea,
+        select {
+          font-size: 0.9rem;
+          padding: 10px;
+        }
         button {
           font-size: 0.9rem;
+          padding: 10px;
         }
       }
     </style>
@@ -110,54 +133,58 @@
   <body>
     <div class="container">
       <div class="header">
-        <img src="./download (1).png" alt="BloomLife Hospital Logo" />
-        <h2>Women's Wellness Camp Feedback Form</h2>
+        <img src="./download (1).png" alt="Aathvi Hospitals Logo" />
+        <h2>women's wellness camp Feedback Form</h2>
+        <div class="address">
+          📍 Aathvi Multispeciality Hospital <br />
+          📅 Date: 05-10-2025
+        </div>
       </div>
-
       <form id="feedbackForm">
-        <input type="text" name="Name" placeholder="Name" />
+        <input type="text" name="Name" placeholder="Name (Optional)" />
         <input type="number" name="Age" placeholder="Age" />
-        <input type="text" name="Mobile_Number" placeholder="Mobile Number" />
-
+        <input
+          type="text"
+          name="Mobile_Number"
+          placeholder="Mobile No (Optional)"
+        />
+        <label>How did you hear about this camp?</label>
         <select name="Heard_About_Camp" required>
-          <option value="">How did you hear about this camp?</option>
+          <option value="">Select an option</option>
           <option value="Newspaper">Newspaper</option>
           <option value="Social Media">Social Media</option>
           <option value="Friends/Family">Friends/Family</option>
           <option value="Doctor Recommendation">Doctor Recommendation</option>
           <option value="Other">Other</option>
         </select>
-
+        <label
+          >Would you recommend Aathvi Hospitals’ health camps to others?</label
+        >
         <select name="Recommend" required>
-          <option value="">Would you recommend our camps?</option>
+          <option value="">Select an option</option>
           <option value="Definitely">Definitely</option>
           <option value="Maybe">Maybe</option>
           <option value="No">No</option>
         </select>
-
         <textarea
           name="Suggestions"
           rows="3"
-          placeholder="Any suggestions?"
+          placeholder="Any suggestions to improve future camps?"
         ></textarea>
-
         <button type="submit">SUBMIT</button>
       </form>
       <p id="msg"></p>
     </div>
-
     <script>
       const scriptURL =
         "https://script.google.com/macros/s/AKfycbwPD4iMA1sE3JJzxGQWBXbEiYfoTFu0QVX6lGpDwuJboFcVxyHfFy_T_obXXEYxqEqm/exec";
       const form = document.getElementById("feedbackForm");
       const msg = document.getElementById("msg");
       const submitBtn = form.querySelector("button[type='submit']");
-
       form.addEventListener("submit", (e) => {
         e.preventDefault();
         submitBtn.innerText = "Submitting...";
         submitBtn.disabled = true;
-
         const formData = new FormData(form);
         fetch(scriptURL, { method: "POST", body: formData })
           .then(() => {
@@ -170,7 +197,7 @@
             msg.innerText = "❌ Error submitting feedback.";
           })
           .finally(() => {
-            submitBtn.innerText = "SUBMIT";
+            submitBtn.innerText = "Submit";
             submitBtn.disabled = false;
           });
       });
