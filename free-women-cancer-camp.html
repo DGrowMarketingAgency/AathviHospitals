@@ -1,741 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>
-      Aathvi Hospitals — Free Women’s Cancer Screening Camp Registration
-    </title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
-      rel="stylesheet"
-    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BloomLife Hospital — Appointment Form</title>
     <style>
-      :root {
-        --accent: #ba0779; /* violet */
-        --muted: #6b7280;
-        --bg: #f8fafc;
-        --card: #ffffff;
-        --success: #10b981;
-        --danger: #ef4444;
-        --glass: rgba(255, 255, 255, 0.6);
-        font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto,
-          "Helvetica Neue", Arial;
-        color-scheme: light;
-      }
-      * {
-        box-sizing: border-box;
-      }
       body {
         margin: 0;
-        /* background: linear-gradient(180deg, #fce3ec 0%, #fce3ec 60%); */
+        font-family: "Poppins", sans-serif;
         background-color: #fce3ec;
-        color: #0f172a;
-      }
-      .container {
-        max-width: 1100px;
-        margin: 40px auto;
-        padding: 24px;
-      }
-
-      /* header */
-      header {
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 16px;
-      }
-      .logo {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-      }
-      .logo .mark {
-        width: 52px;
-        height: 52px;
-        border-radius: 12px;
-        background: linear-gradient(135deg, var(--accent), #781666);
-        display: flex;
-        align-items: center;
         justify-content: center;
-        color: white;
-        font-weight: 700;
-        font-family: "Playfair Display";
-        font-size: 18px;
-      }
-      .logo h1 {
-        margin: 0;
-        font-size: 18px;
-      }
-      .meta {
-        color: var(--muted);
-        font-size: 14px;
-      }
-
-      /* hero */
-      .hero {
-        display: grid;
-        grid-template-columns: 1fr 420px;
-        gap: 28px;
-        margin-top: 18px;
-        /* align-items: center; */
-        align-items: start;
-      }
-      .hero-card {
-        /* background: var(--card);
-        border-radius: 14px;
-        padding: 28px;
-        box-shadow: 0 8px 30px rgba(2, 6, 23, 0.06); */
-        position: sticky;
-        top: 20px;
-        align-self: start;
-        background: var(--card);
-        border-radius: 14px;
-        padding: 28px;
-        box-shadow: 0 8px 30px rgba(2, 6, 23, 0.06);
-      }
-      .eyebrow {
-        display: inline-block;
-        padding: 6px 10px;
-        background: linear-gradient(
-          90deg,
-          rgba(124, 58, 237, 0.1),
-          rgba(91, 33, 182, 0.06)
-        );
-        border-radius: 999px;
-        color: var(--accent);
-        font-weight: 600;
-        font-size: 13px;
-      }
-      h2 {
-        /* font-family: "Playfair Display", serif; */
-        font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto,
-          "Helvetica Neue", Arial;
-        margin: 12px 0 6px;
-        font-size: 26px;
-      }
-      p.lead {
-        margin: 0 0 12px;
-        color: var(--muted);
-      }
-      .info-row {
-        display: flex;
-        gap: 12px;
-        flex-wrap: wrap;
-        margin-top: 12px;
-      }
-      .pill {
-        display: flex;
-        gap: 8px;
         align-items: center;
-        padding: 10px 12px;
-        background: linear-gradient(90deg, #fbf8ff, #fff);
-        border-radius: 10px;
-        border: 1px solid rgba(124, 58, 237, 0.06);
+        min-height: 100vh;
       }
 
-      /* form */
-      form {
-        background: linear-gradient(
-          180deg,
-          rgba(255, 255, 255, 0.9),
-          rgba(255, 255, 255, 0.85)
-        );
-        padding: 20px;
-        border-radius: 12px;
-        border: 1px solid rgba(15, 23, 42, 0.04);
-      }
-      fieldset {
-        border: 0;
-        margin: 0;
-        padding: 0;
-      }
-      .section {
-        margin-bottom: 18px;
-      }
-      label {
-        display: block;
-        font-weight: 600;
-        margin-bottom: 6px;
-      }
-      input[type="text"],
-      input[type="email"],
-      input[type="tel"],
-      textarea,
-      select {
+      .appointment-container {
+        background-color: #fce3ec;
         width: 100%;
-        padding: 10px 12px;
-        border-radius: 8px;
-        border: 1px solid #e6e9ef;
-        background: #fff;
-        font-size: 14px;
+        max-width: 400px;
+        text-align: center;
+        padding: 20px;
       }
-      textarea {
-        min-height: 90px;
-        resize: vertical;
-      }
-      .row {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 12px;
-      }
-      .checkbox-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 8px;
-      }
-      .small {
-        font-size: 13px;
-        color: var(--muted);
-      }
-      .actions {
-        display: flex;
-        gap: 12px;
-        align-items: center;
-      }
-      button.primary {
-        background: linear-gradient(90deg, var(--accent), #781666);
-        color: white;
-        border: 0;
-        padding: 12px 16px;
-        border-radius: 10px;
-        font-weight: 700;
-        cursor: pointer;
-      }
-      button.ghost {
-        background: transparent;
-        border: 1px solid rgba(15, 23, 42, 0.06);
-        padding: 10px 12px;
-        border-radius: 10px;
-      }
-      .price-tag {
-        display: inline-block;
-        background: #f3f4f6;
-        padding: 6px 10px;
-        border-radius: 999px;
+
+      .appointment-container h2 {
+        color: #2a7b7a;
+        font-size: 28px;
+        margin-bottom: 20px;
         font-weight: 700;
       }
-      .logo img {
-        width: 200px;
-      }
-      .header-sec {
-        /* background-color: var(--card); */
-      }
-      .header-sec .container {
-        margin-top: 0;
+
+      form {
+        background: white;
+        border-radius: 25px;
+        padding: 30px 25px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
       }
-      .header-sec .container h1 {
-        font-size: 2rem;
-        text-align: center;
-        color: var(--accent);
-      }
-      /* responsiveness */
-      @media (max-width: 980px) {
-        .hero {
-          grid-template-columns: 1fr;
-        }
-        .header-sec .container h1 {
-          font-size: 1.5rem;
-          margin-bottom: 10px;
-        }
-        .container {
-          padding: 18px;
-          margin: 18px auto;
-        }
-        .hero-card {
-          position: relative;
-        }
-        header {
-          flex-direction: column;
-        }
-      }
-      @media (max-width: 520px) {
-        .row {
-          grid-template-columns: 1fr;
-        }
-        .checkbox-grid {
-          grid-template-columns: 1fr;
-        }
+
+      input,
+      select {
+        width: 95%;
+        padding: 12px 15px;
+        border-radius: 20px;
+        border: 1px solid #ccc;
+        margin-bottom: 15px;
+        font-size: 15px;
+        outline: none;
+        transition: all 0.3s;
       }
 
-      footer {
-        margin-top: 18px;
-        padding: 18px 0;
-        color: var(--muted);
-        font-size: 14px;
-        text-align: center;
+      input:focus,
+      select:focus {
+        border-color: #2a7b7a;
+        box-shadow: 0 0 0 3px rgba(42, 123, 122, 0.1);
       }
 
-      /* subtle helpers */
-      .muted {
-        color: var(--muted);
+      button {
+        width: 100%;
+        background-color: #2a7b7a;
+        color: white;
+        border: none;
+        border-radius: 25px;
+        padding: 12px 0;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.3s;
       }
-      .required {
-        color: var(--danger);
-        margin-left: 6px;
+
+      button:hover {
+        background-color: #256f6e;
       }
-      .hidden {
-        display: none;
+
+      @media (max-width: 480px) {
+        .appointment-container {
+          padding: 10px;
+        }
+
+        .appointment-container h2 {
+          font-size: 24px;
+        }
       }
     </style>
   </head>
   <body>
-    <div class="header-sec">
-      <div class="container">
-        <div class="logo">
-          <img src="./download (1).png" alt="" />
-        </div>
-        <h1>FREE WOMEN’S CANCER SCREENING CAMP</h1>
-      </div>
-    </div>
-    <div class="container">
-      <header>
-        <div class="logo">
-          <div class="mark">AH</div>
-          <div>
-            <h2>Aathvi Hospitals</h2>
-            <div class="meta">
-              Pallavaram — Free Women’s Cancer Screening Camp
-            </div>
-          </div>
-        </div>
-        <div class="meta small">📅 12 Oct 2025 · 🕙 10:00 AM - 4:00 PM</div>
-      </header>
-
-      <div class="hero">
-        <div class="hero-card">
-          <span class="eyebrow">Free · Preventive Care</span>
-          <h2>Screen today. Be safe tomorrow.</h2>
-          <p class="lead">
-            Join our free women’s cancer screening camp at Aathvi Hospitals,
-            Pallavaram. Early detection saves lives — book your slot now.
-          </p>
-
-          <div class="info-row">
-            <div class="pill">
-              📍 Aathvi Hospital, No.2 Dharga Road, Zamin Pallavaram
-            </div>
-            <div class="pill">☎️ 80565 65757</div>
-          </div>
-
-          <hr
-            style="margin: 18px 0; border: 0; border-top: 1px solid #eef2ff"
-          />
-
-          <h3 style="margin: 0 0 8px">Available Screenings</h3>
-          <ul style="margin: 6px 0 0; padding-left: 18px; color: var(--muted)">
-            <li>Hemoglobin Test</li>
-            <li>Blood Sugar Test</li>
-            <li>Cervix Screening</li>
-            <li>USG (TVS)</li>
-            <li>Breast Examination</li>
-            <li>Gynecologist Consultation</li>
-            <li>
-              PAP Smear + HPV DNA Test —
-              <span class="price-tag">₹1750 Offer</span>
-            </li>
-          </ul>
-        </div>
-
-        <div>
-          <form
-            id="regForm"
-            autocomplete="on"
-            onsubmit="return handleSubmit(event)"
-          >
-            <!-- Section 1: Personal Details -->
-            <fieldset class="section">
-              <legend style="font-weight: 700; margin-bottom: 10px">
-                Personal Details
-              </legend>
-              <div class="row">
-                <div>
-                  <label for="fullName"
-                    >Full Name <span class="required">*</span></label
-                  >
-                  <input
-                    id="fullName"
-                    name="fullName"
-                    type="text"
-                    required
-                    placeholder="Your full name"
-                  />
-                </div>
-                <div>
-                  <label for="age">Age <span class="required">*</span></label>
-                  <input
-                    id="age"
-                    name="age"
-                    type="text"
-                    required
-                    placeholder="e.g., 35"
-                  />
-                </div>
-              </div>
-
-              <div class="row" style="margin-top: 10px">
-                <div>
-                  <label for="mobile"
-                    >Mobile Number <span class="required">*</span></label
-                  >
-                  <input
-                    id="mobile"
-                    name="mobile"
-                    type="tel"
-                    required
-                    placeholder="+91 98765 43210"
-                  />
-                </div>
-                <div>
-                  <label for="email">Email ID</label>
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    placeholder="you@example.com"
-                  />
-                </div>
-              </div>
-
-              <div style="margin-top: 10px">
-                <label for="address">Address</label>
-                <textarea
-                  id="address"
-                  name="address"
-                  placeholder="House number, street, city, pin code"
-                ></textarea>
-              </div>
-            </fieldset>
-
-            <!-- Section 2: Health Information -->
-            <fieldset class="section">
-              <legend style="font-weight: 700; margin-bottom: 10px">
-                Health Information
-              </legend>
-
-              <label>Have you attended a screening camp before?</label>
-              <div style="display: flex; gap: 12px; margin-bottom: 10px">
-                <label
-                  ><input type="radio" name="attendedBefore" value="Yes" />
-                  Yes</label
-                >
-                <label
-                  ><input
-                    type="radio"
-                    name="attendedBefore"
-                    value="No"
-                    checked
-                  />
-                  No</label
-                >
-              </div>
-
-              <label>Any existing medical conditions?</label>
-              <div class="checkbox-grid" style="margin-bottom: 8px">
-                <label
-                  ><input type="checkbox" name="conditions" value="Diabetes" />
-                  Diabetes</label
-                >
-                <label
-                  ><input
-                    type="checkbox"
-                    name="conditions"
-                    value="Hypertension"
-                  />
-                  Hypertension</label
-                >
-                <label
-                  ><input type="checkbox" name="conditions" value="Thyroid" />
-                  Thyroid</label
-                >
-                <label
-                  ><input type="checkbox" name="conditions" value="None" />
-                  None</label
-                >
-              </div>
-              <div style="margin-top: 6px">
-                <label for="otherConditions">Others (please specify)</label>
-                <input
-                  id="otherConditions"
-                  name="otherConditions"
-                  type="text"
-                  placeholder="If others, mention here"
-                />
-              </div>
-
-              <div style="margin-top: 10px">
-                <label
-                  >Are you currently under any treatment or medication?</label
-                >
-                <div style="display: flex; gap: 12px; margin-bottom: 10px">
-                  <label
-                    ><input type="radio" name="onMedication" value="Yes" />
-                    Yes</label
-                  >
-                  <label
-                    ><input
-                      type="radio"
-                      name="onMedication"
-                      value="No"
-                      checked
-                    />
-                    No</label
-                  >
-                </div>
-                <div id="medDetails" class="hidden">
-                  <label for="medicationDetails"
-                    >If yes — please mention details</label
-                  >
-                  <input
-                    id="medicationDetails"
-                    name="medicationDetails"
-                    type="text"
-                    placeholder="Medication / treatment details"
-                  />
-                </div>
-              </div>
-            </fieldset>
-
-            <!-- Section 3: Screening Preferences -->
-            <fieldset class="section">
-              <legend style="font-weight: 700; margin-bottom: 10px">
-                Screening Preferences
-              </legend>
-              <div class="checkbox-grid" style="margin-bottom: 10px">
-                <label
-                  ><input type="checkbox" name="tests" value="Hemoglobin" />
-                  Hemoglobin Test</label
-                >
-                <label
-                  ><input type="checkbox" name="tests" value="Blood Sugar" />
-                  Blood Sugar Test</label
-                >
-                <label
-                  ><input
-                    type="checkbox"
-                    name="tests"
-                    value="Cervix Screening"
-                  />
-                  Cervix Screening</label
-                >
-                <label
-                  ><input type="checkbox" name="tests" value="USG (TVS)" /> USG
-                  (TVS)</label
-                >
-                <label
-                  ><input
-                    type="checkbox"
-                    name="tests"
-                    value="Breast Examination"
-                  />
-                  Breast Examination</label
-                >
-                <label
-                  ><input
-                    type="checkbox"
-                    name="tests"
-                    value="Gynecologist Consultation"
-                  />
-                  Gynecologist Consultation</label
-                >
-                <label style="grid-column: 1 / -1"
-                  ><input
-                    type="checkbox"
-                    name="tests"
-                    value="PAP Smear + HPV DNA Test"
-                  />
-                  PAP Smear + HPV DNA Test
-                  <span class="small">(₹1750 Offer)</span></label
-                >
-              </div>
-            </fieldset>
-
-            <!-- Section 4: Consent -->
-            <fieldset class="section">
-              <legend style="font-weight: 700; margin-bottom: 10px">
-                Consent
-              </legend>
-              <label for="consentText">Consent Declaration</label>
-              <textarea id="consentText" readonly>
-I hereby consent to participate in the Free Women’s Cancer Screening Camp organized by Aathvi Hospitals. I understand this is a preventive check-up and agree to follow medical advice as recommended.</textarea
-              >
-              <div style="margin-top: 8px">
-                <label
-                  ><input id="agree" name="agree" type="checkbox" required /> I
-                  agree <span class="required">*</span></label
-                >
-              </div>
-            </fieldset>
-
-            <!-- Section 5: Confirmation -->
-            <fieldset class="section">
-              <legend style="font-weight: 700; margin-bottom: 10px">
-                Confirmation
-              </legend>
-              <p class="small">
-                For any queries, contact:
-                <a href="tel:+918056565757">80565 65757</a> ·
-                <a href="mailto:aathvihospital@gmail.com"
-                  >aathvihospital@gmail.com</a
-                >
-              </p>
-              <p class="small">
-                Visit:
-                <a
-                  href="https://www.aathvihospitals.com"
-                  target="_blank"
-                  rel="noopener"
-                  >www.aathvihospitals.com</a
-                >
-              </p>
-            </fieldset>
-
-            <div class="actions">
-              <button type="submit" class="primary">Register Now</button>
-              <button type="button" class="ghost" onclick="resetForm()">
-                Reset
-              </button>
-            </div>
-          </form>
-
-          <footer>
-            <div>
-              Address: Aathvi Hospital, No.2, Dharga Road, Zamin Pallavaram,
-              Pallavaram
-            </div>
-          </footer>
-        </div>
-      </div>
+    <div class="appointment-container">
+      <img
+        src="./download (1).png"
+        alt="BloomLife Hospital Logo"
+        style="width: 180px; margin-bottom: 10px"
+      />
+      <h2>Appointment</h2>
+      <form id="regForm" onsubmit="return handleSubmit(event)">
+        <input type="text" id="name" name="name" placeholder="Name" required />
+        <input
+          type="tel"
+          id="mobile"
+          name="mobile"
+          placeholder="Mobile"
+          required
+        />
+        <select id="camp" name="camp" required>
+          <option value="">Select Camp</option>
+          <option value="FREE Women’s Cancer Screening Camp">
+            FREE Women’s Cancer Screening Camp
+          </option>
+        </select>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Email"
+          required
+        />
+        <input
+          type="text"
+          id="location"
+          name="location"
+          placeholder="Location"
+          required
+        />
+        <button type="submit">SUBMIT</button>
+      </form>
     </div>
 
     <script>
-      // toggle medication field
-      document.querySelectorAll('input[name="onMedication"]').forEach((r) =>
-        r.addEventListener("change", (e) => {
-          const med = document.getElementById("medDetails");
-          e.target.value === "Yes"
-            ? med.classList.remove("hidden")
-            : med.classList.add("hidden");
-        })
-      );
-
       async function handleSubmit(e) {
         e.preventDefault();
         const form = document.getElementById("regForm");
-        const btn = form.querySelector("button.primary");
+        const btn = form.querySelector("button");
         const data = new FormData(form);
-        const params = new URLSearchParams();
-
-        for (const [key, value] of data.entries()) {
-          if (params.has(key)) params.set(key, params.get(key) + ", " + value);
-          else params.append(key, value);
-        }
-
-        if (!params.get("tests")) {
-          alert("Please select at least one screening test.");
-          return;
-        }
-        if (!params.get("agree")) {
-          alert("You must agree to the consent to register.");
-          return;
-        }
-
+        const params = new URLSearchParams(data);
         const scriptURL =
-          "https://script.google.com/macros/s/AKfycbwezkV0AbVkNePy8iq6OusCJ1Ml7w9QDQFUN2u_NG297Wc8IeMasw827tcXsvHCJheiNA/exec"; // replace this with your actual Web App URL
+          "https://script.google.com/macros/s/AKfycbwezkV0AbVkNePy8iq6OusCJ1Ml7w9QDQFUN2u_NG297Wc8IeMasw827tcXsvHCJheiNA/exec";
 
         try {
           btn.disabled = true;
-          btn.textContent = "Registering...";
+          btn.textContent = "Submitting...";
           const response = await fetch(scriptURL, {
             method: "POST",
             body: params,
           });
           const result = await response.json();
           if (result.result === "success") {
-            btn.textContent = "Registered ✅";
-            alert(
-              "✅ Registration successful! Thank you for joining the camp."
-            );
+            alert("✅ Appointment registered successfully!");
             form.reset();
-            document.getElementById("medDetails").classList.add("hidden");
           } else {
-            alert("⚠️ Something went wrong: " + result.error);
-            btn.textContent = "Register Now";
+            alert("⚠️ Something went wrong. Try again later.");
           }
         } catch (err) {
-          console.error(err);
           alert("🚫 Network error. Please try again.");
-          btn.textContent = "Register Now";
         } finally {
-          setTimeout(() => {
-            btn.disabled = false;
-            btn.textContent = "Register Now";
-          }, 2500);
+          btn.disabled = false;
+          btn.textContent = "SUBMIT";
         }
-      }
-
-      function resetForm() {
-        document.getElementById("regForm").reset();
-        document.getElementById("medDetails").classList.add("hidden");
       }
     </script>
-
-    <!-- <script>
-      async function handleSubmit(e) {
-        e.preventDefault();
-        const form = document.getElementById("regForm");
-        const data = new FormData(form);
-        const params = new URLSearchParams();
-
-        for (const [key, value] of data.entries()) {
-          // handle multi-select checkboxes correctly
-          if (params.has(key)) {
-            params.set(key, params.get(key) + ", " + value);
-          } else {
-            params.append(key, value);
-          }
-        }
-
-        if (!params.get("tests")) {
-          alert("Please select at least one screening test.");
-          return;
-        }
-
-        if (!params.get("agree")) {
-          alert("You must agree to the consent to register.");
-          return;
-        }
-
-        const scriptURL =
-          "https://script.google.com/macros/s/AKfycbwezkV0AbVkNePy8iq6OusCJ1Ml7w9QDQFUN2u_NG297Wc8IeMasw827tcXsvHCJheiNA/exec"; // 🔗 your web app URL
-
-        try {
-          const response = await fetch(scriptURL, {
-            method: "POST",
-            body: params,
-          });
-
-          const result = await response.json();
-          if (result.result === "success") {
-            alert(
-              "✅ Registration successful! Thank you for joining the camp."
-            );
-            form.reset();
-            document.getElementById("medDetails").classList.add("hidden");
-          } else {
-            alert("⚠️ Something went wrong: " + result.error);
-          }
-        } catch (err) {
-          console.error(err);
-          alert("🚫 Network error. Please try again.");
-        }
-      }
-    </script> -->
   </body>
 </html>
